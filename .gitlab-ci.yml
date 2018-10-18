@@ -1,0 +1,9 @@
+deploy-to-production:
+  image: ruby:2.5.0
+  stage: deploy
+  script:
+    - gem install dpl
+    - echo "uncomment dpl line"
+    - dpl --provider=heroku --app=taldev --api-key=$HEROKU_API_KEY
+  only:
+    - master
