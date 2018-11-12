@@ -24,3 +24,10 @@ yarn run test
 ```
 yarn run lint
 ```
+
+### DOKERIZING
+```
+docker build -t ACCOUNT_DOCKER/APPNAME .
+docker run -d -p 80:8080 ACCOUNT_DOCKER/APPNAME
+```
+Hit http://localhost on your browser
